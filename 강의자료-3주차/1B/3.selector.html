@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#box {
+    width:100px;
+    height:100px;
+    background-color:lightcoral;
+}
+#box:hover { /* pseudo-class (의사) */
+    cursor: pointer;
+}
+.circle {
+    width:100px;
+    height:100px;
+    background-color:lightblue;
+    border-radius: 50%;
+    outline:1px dotted black;
+}
+.circle.purple {
+   background-color: purple; 
+}
+.circle .red {
+    color: red;
+}
+span[title="mytext"] {
+    color: blue !important;
+}
+</style>
+</head>
+<body>
+
+<div class="circle">
+    <span class="red" title="mytext">circle</span>
+</div>    
+<div id="box"></div>  
+<div class="circle purple"></div> 
+
+<script>
+document.getElementById('box').onclick = function(){
+    this.style.backgroundColor = 'lightgreen'; // camel case
+}
+</script>    
+
+</body>
+</html>

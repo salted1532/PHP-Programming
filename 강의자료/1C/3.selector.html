@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#box {
+    width:100px;
+    height:100px;
+    background-color:lightcoral;
+}  
+/* pseudo-class (의사) */
+#box:hover, .circle:hover { 
+    cursor: pointer;
+} 
+.circle {
+    width:100px;
+    height:100px;
+    background-color:lightgreen;
+    border-radius:50%;
+} 
+.circle.purple {
+    background-color: purple;
+}
+.circle .red {
+    color: red;
+}
+</style>
+</head>
+<body>
+
+<div class="circle">
+    <span class="red">Circle</span>
+</div>    
+<div id="box"></div>
+<div class="circle purple"></div>
+
+<script>
+document.getElementById('box').onclick = function(){
+    //document.getElementById('box').style.backgroundColor = 'lightblue';
+    this.style.backgroundColor = 'lightgray';
+}    
+</script>
+
+</body>
+</html>

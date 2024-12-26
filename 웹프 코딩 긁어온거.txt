@@ -1,0 +1,41 @@
+CREATE TABLE member (
+    id VARCHAR(6) PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)
+
+
+//
+
+############## For phpmyadmin ######################
+Alias /mysql "C:/_server/phpMyAdmin-5.0.4-all-languages"
+<Directory "C:/_server/phpMyAdmin-5.0.4-all-languages">
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+</Directory>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/bootstrap-4.5.3/css/bootstrap.min.css">
+<title>Document</title>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+</div>
+</body>
+</html>

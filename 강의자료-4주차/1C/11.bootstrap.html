@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="bootstrap-4.5.2/css/bootstrap.min.css">
+<style>
+/* customer style */ 
+.container, .container-fluid {
+    outline: 1px solid red;
+}   
+.row > * {
+    outline: 1px dotted navy;
+    padding: 10px 0;
+}
+</style>
+<title>bootstrap start</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <div class="card">
+                <img src="https://dummyimage.com/600x400/666/fff" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <img src="http://lorempixel.com/400/200/cats/" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            One of three columns
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <div class="alert alert-primary" role="alert">
+                A simple primary alert—check it out!
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="alert alert-danger" role="alert">
+                A simple danger alert—check it out!
+            </div>
+        </div>
+        <div class="col-4">
+            <button type="button" class="btn btn-success btn-lg btn-block">Success</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+*웹프로그래밍
+
+곽문기 
+kmoonki@naver.com
+
+*교재 
+IT CookBook, PHP 프로그래밍 입문(3판), 황재호, 한빛아카데미
+---------------------------------------
+*평가
+1. 20(출석,평소) + 40(중간) + 40(기말)
+2. 중간, 기말 => 학교 필기 시험
+
+*과제 제출 카페 - https://cafe.naver.com/seoilhomework
+
+*진행
+1. 실습 위주 ==> 영타 200타/분, 한타 250타/분
+2. 서버 설치, 예제 실행
+3. 용어 정리
+4. 과제 4번쯤 
+5. 구글 크롬 브라우저 + 에디터 (NOT 메모장) + 검색 (구글링)
+----------------------------------------
+
+*인간 vs. 동물 (차이)
+1. Homo Faber (도구의 인간) -> 효율적(과정) vs. 효과적(결과)
+`생산성 - 시간, 비용, 품질
+2. Homo Ludens (유희의 인간) -> 즐겁게 
+
+
+*우리의 도구
+1. Text Editor - 비주얼 스튜디오 코드 (visual studio code) https://code.visualstudio.com/
+`extension - 한글팩, open in browser
+`emmet (default extension) - https://docs.emmet.io/cheat-sheet/
+2. Text Editor - SublimeText 3 https://www.sublimetext.com/3
+3. 이미지 Editor - picpick https://picpick.app/ko
+4. zip - 반디집 https://kr.bandisoft.com/bandizip/
+5. 크롬 웹스토어 (익스텐션) - goFullPage
+6. code share notepad.pw => https://notepad.pw/seoilsw2020
+....
+
+
+*웹(web)
+1. 웹표준 - HTML, CSS, JS - 역할(role)
+`HTML - Structure (뼈대)
+`CSS - Presentation (표현)
+`JS - Behavior (동작, 이벤트)
+
+
+2. 웹 원리 및 구성
+`클라이언트 (요청 request, 브라우저) vs. 서버 (응답 response) - 역할(role)
+`Client(Browser) --(Request)--> Server --(Response)--> Client (Rendering)
+`Front-End vs. Back-End => PHP (웹 프로그래밍 언어)
+
+*연산 언어 vs. 표현 언어
+*프로그래밍 언어 vs. 스크립트 언어 (script) - 컴파일 (compile) 
+`컴파일 잇점 => 수행(실행) 빨라진다, 문법(syntax) 확인
+`번역 vs. 통역
+`Client-side Script (JS) vs. Server-side Script (PHP, ASP, JSP)
+`Request(client) -> Reponse(server) -> Rendering(client)
+
+*정적(static) 페이지 vs. 동적(dynamic) 페이지
+
+----------------------------------------
+#2주차 - 9/10(목)
+
+*참고 사이트
+1. https://www.w3schools.com/
+2. https://htmlreference.io/
+3. https://cssreference.io/
+4. 
+
+*웹표준 정리
+1)Block Element vs. Inline Element - <div> vs. <span>
+`<div> -> <h1>, <p>
+2)Box model - border, padding, margin - width 결정!
+3)*** 선택자(selector) - identify 식별자 - id, class
+`https://www.w3schools.com/cssref/css_selectors.asp
+`가계도 => parent, child, siblings
+4)float 
+5)position - relative(상대) vs. absolute(절대)
+
+*layout => bootstrap (web-page framework) https://getbootstrap.com
+
+*인증절차
+식별자(identity) -> 인증(Authentication) -> 인가(Authorization)
+
+*coding convention
+http://darum.daum.net/
+https://nuli.navercorp.com/
+
+context menu
+
+
+<a href="http://daum.net">다음으로 이동</a>
+
+<a> - 태그, element, 요소
+href - 속성 (attribute)
+http:~~ - 속성 값 (attribute value)
+다음으로 ~ - text node
+
+feature(특징) - 정적 vs. 동적
+attribute vs. property
+
+
+
+나(주체) ---(관계)--- 너(객체)
+객체 + (객체간) 관계 
+
+`이벤트(event) - 이벤트 신호 (trigger) + 이벤트 내용 (handler)
+`event-driven
+
+객체 - 트리거(trigger) - 핸들러(handler)
+// id="box"
+document.getElementById('box').onclick = function(){
+    ~~~
+}
+
+----------------------------------------
+#3주차 - 9/17(목)
+
+`어떻게 보이는지, 어떤 의미인지 - 형식 vs. 내용(의미)
+`Syntax (문법) vs. 시맨틱 (semantic)
+
+<em> vs. <i>
+<strong> vs. <b>
+
+4)float - 영역을 나누는 방법 -> flexbox, grid
+`<ol> vs. <ul>
+`parent-child, sibling
+`scaffolding => border vs. outline
+`css unit => 상대단위 (px,em,% ..), 절대단위 (cm,mm,pt ..)
+`em => {16px == 1em} ==> rem => root em
+<span style="font-size:.8em">안녕</span> => 16*0.8px => 12.8px
+
+<span style="font-size:.8em">
+    <span style="font-size:.8em">안녕</span> => 16*0.8*0.8 => 10.24px
+</span>
+
+<span style="font-size:.8rem">
+    <span style="font-size:.8rem">안녕</span> => 16*0.8 => 12.8px
+</span>
+
+`mouseover(hover) -> mousedown(active) -> mouseup
+
+`식별자 (파일이름, 변수이름...) => 이름만 봐도 무슨일을 하는지 짐작가도록...
+
+`76px
+`159 - 77 = 82px
+`257 - 160 = 97px
+`355 - 258 = 97px
+
+
+*과제 있음.
+https://www.w3schools.com/tags/ref_eventattributes.asp
+
+----------------------------------------
+#4주차 - 9/24(목) 
+
+`cssText
+
+5)position - relative(상대) vs. absolute(절대) - 위치설정
+`원점(절대원점) - 브라우저에서 (0,0) 지점
+`기준점 - 개체(요소)의 위치값
+
+`z-index
+`redering
+
+z++ vs. ++z
+
+*Bootstrap 설치 및 사용 => getbootstrap.com (web framework)
+*아파치 웹서버 설치 
+
+`responsive web (반응형) vs. adaptive web (적응형)
+`device-width, media-query
+
+href, src => 경로(path) - 절대 vs. 상대
+
+column 수 => 12 (완전수) 6 => 1, 2, 3, 6
+
+https://dummyimage.com/
+
+http://lorempixel.com/
+
+
+*과제 bootstrap UI 연습 2개 예제 인증샷

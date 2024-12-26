@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="bootstrap-4.5.2/css/bootstrap.min.css">
+<style>
+.row > div {
+    /* outline: 1px solid lightcoral; */
+}
+</style>
+<title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <img src="https://dummyimage.com/600x400/333/369" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div><!--/.col-4-->
+        <div class="col-4">
+            <div class="card">
+                <img src="http://lorempixel.com/400/200/sports/" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <img src="http://lorempixel.com/400/200/cats/" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+//console.log(document.querySelectorAll('.card').length);
+// 대상객체(주어) + 트리거 + 핸들러
+/*
+document.querySelectorAll('.card')[1].onclick = function(){
+    alert('클릭');
+}
+*/
+
+var category = ['city','food','nightlife','fashion'];
+document.querySelector('.col-4:nth-of-type(2) img').onclick = function(){
+    //alert('이미지');
+    var theme = category[Math.floor(Math.random() * category.length)];
+    this.setAttribute('src', 'http://lorempixel.com/400/200/'+theme+'/');
+}
+</script>
+</body>
+</html>

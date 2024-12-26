@@ -1,0 +1,18 @@
+block -> div
+inline -> span
+
+영역
+사각형을 기준으로 
+사각형을 border 
+안쪽을 padding
+바깥을 margin
+
+통합으로 width
+
+*** 선택자 selector (중요) - identify 식별자 - id, class
+
+*인증절차
+식별자(identity) -> 인증(Authentification) -> 인가(Authorization)
+아이디,비번 <-식별자     서버에서 확인         사용 권한 줌
+
+float  position absolute 

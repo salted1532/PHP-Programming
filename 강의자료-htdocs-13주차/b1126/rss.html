@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/bootstrap-4.5.3/css/bootstrap.min.css">
+<style>
+iframe {
+    height:100vh;
+    width:64vw;
+}    
+</style>
+<title>Document</title>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4">
+            <button type="button" class="btn btn-primary btn-block">가져오기</button>
+            <div id="pocket"></div>
+        </div>
+        <div class="col-8">
+            <iframe class="embed-responsive-item" src="javascript:void(0)" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/js/jquery-3.5.1.min.js"></script> 
+<script>
+$('.btn-primary').click(function(){
+    //$.get('').done(function(){});
+    /*
+    $.get('http://rss.etnews.com/Section901.xml').done(function(data){
+        console.log(data);
+    });
+    */
+    $.get('rss.php').done(function(data){
+        //console.log(data);
+        var rs = $(data).find('item'); // 배열
+        var rsArray = [];
+        $.each(rs, function(){
+            var title = $(this).find('title').text();
+            var link = $(this).find('link').text();
+
+            rsArray.push('<li class="list-group-item" data-link="'+link+'">'+title+'</li>');
+        });
+
+        $('#pocket').html('<ul class="list-group">'+rsArray.join('')+'</ul>');
+    });
+});    
+
+$(document).on('click', 'li.list-group-item', function(){
+    //var link = $(this).data('link');
+    //$('iframe').attr('src', link);
+    $('iframe').attr('src', $(this).data('link'));
+
+    $(this).siblings().removeClass('active').end().addClass('active');
+});
+</script>   
+</body>
+</html>

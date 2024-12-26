@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#box {
+    width:200px;
+    height:200px;
+    background-color:lightcoral;
+}
+#circle {
+    width:200px;
+    height:200px;
+    background-color:lightblue;
+    border-radius:50%;
+}
+.shadow {
+    box-shadow: 3px 3px 3px #888;
+}
+</style>
+</head>
+<body>
+
+<div id="circle"></div>
+<div id="box"></div>
+
+<script src="javascript/jquery-3.5.1.min.js"></script>  
+<script>    
+$('#box').click(function(){
+    //console.log($(this).css('width'));
+
+    // $(this).css('background-color','lightgreen');
+    // $(this).css('border-radius','50%');
+
+    $(this).css({
+        backgroundColor: 'lightgray',
+        // 'border-radius': '50%'
+        borderRadius: '50%'
+    }); // key-value
+});
+
+$('#circle').click(function(){
+    if($(this).hasClass('shadow')){
+        // remove
+        $(this).removeClass();
+        //$(this).attr('title','그림자 뺌');
+        $(this).removeAttr('title');
+    }else{
+        // add
+        // $(this).addClass('shadow');
+        // $(this).attr('title','그림자 적용');
+
+        // chaining (체이닝)
+        $(this).addClass('shadow').attr('title','그림자 적용');
+    }
+});
+</script>    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#blue, #red {
+    width:200px;
+    height:200px;
+    background-color:blue;
+    position:absolute;
+    top:100px;
+    left:100px;
+}    
+#red {
+    background-color:red;
+    top:200px;
+    left:200px;
+    /* z-index:1; */
+}
+</style>
+</head>
+<body>
+
+<div id="red"></div>
+<div id="blue"></div>
+
+<script>
+var z = 0; // z-index 용 전역변수    
+document.querySelector('#red').onclick = function(){
+    z += 1; // z = z + 1; 중복NO, 귀차니즘
+    this.style.zIndex = z;
+    console.log(z);
+}
+document.querySelector('#blue').onclick = function(){
+    z += 1; 
+    this.style.zIndex = z;
+    console.log(z);
+}
+</script>    
+
+</body>
+</html>

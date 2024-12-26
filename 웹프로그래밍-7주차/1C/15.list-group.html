@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="bootstrap-4.5.2/css/bootstrap.min.css">
+<title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <ul class="list-group">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+        </div>
+        <div class="col">
+            <div class="input-group mb-3">
+                <input type="text" name="query" class="form-control" placeholder="검색입력후 엔터">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('.list-group-item').forEach(function(mylist){
+    mylist.onclick = function(){
+        this.setAttribute('class','list-group-item active');
+    }
+});
+
+document.querySelector('input[name="query"]').onkeydown = function(event){
+    //console.log(event.keyCode);
+    if(event.keyCode == 13){ // 엔터 클릭!
+        //location.href = 'http://daum.net';
+        //console.log(this.value);
+        location.href = 'http://' + this.value;
+    }
+}
+</script>
+</body>
+</html>

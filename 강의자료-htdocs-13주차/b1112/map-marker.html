@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/bootstrap-4.5.3/css/bootstrap.min.css">
+<style>
+#map {
+    /* height:500px; */
+    height:100vh; /* viewport height */
+}    
+#map ul.level {
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:999;
+    list-style-type: none;
+    padding:0;
+}
+#map ul.level > li {
+    width:3rem;
+    height:3rem;
+    line-height:2.5rem;
+    font-size:2.6rem;
+    text-align:center;
+    background-color:rgba(0,0,0,.6);
+    color:#fff;
+    margin:5px 0;
+    border:1px solid #999;
+    border-radius:5px;
+    cursor:pointer;
+}
+</style>
+<title>Document</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div id="map">
+        <ul class="level">
+            <li>+</li>
+            <li>-</li>
+        </ul>
+    </div>
+</div>
+
+<script src="/assets/js/jquery-3.5.1.min.js"></script>
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c362ba71e4d927c043d0a3e4b1e6591e"></script>
+<script>
+var container = document.getElementById('map');
+var options = {
+    center: new kakao.maps.LatLng(37.585641, 127.097096),
+    level: 3
+};
+
+var map = new kakao.maps.Map(container, options);
+/*
+var marker = new kakao.maps.Marker({ 
+    //map: map,
+    position: map.getCenter() 
+}); 
+marker.setMap(map);
+*/
+
+kakao.maps.event.addListener(map, 'click', function(mouseEvent) {  
+    var latlng = mouseEvent.latLng; // object
+    //console.log(latlng.getLat(), latlng.getLng());
+
+    //map.setCenter(latlng);
+    // map.panTo(latlng);
+
+    var marker = new kakao.maps.Marker({ 
+        map: map,
+        position: latlng 
+    }); 
+});
+
+$('#map ul.level > li').click(function(){
+    //console.log($(this).index());
+    var curLevel = map.getLevel(); // 1 ~ 14
+    if($(this).index() == 0){ // +, zoom-in
+        //console.log(map.getLevel());
+        if(curLevel > 1){
+            map.setLevel(curLevel - 1); //2
+        }
+    } else { // -, zoom-out
+        if(curLevel < 14){
+            map.setLevel(curLevel + 1); //4
+        }
+    }
+});
+</script>    
+</body>
+</html>

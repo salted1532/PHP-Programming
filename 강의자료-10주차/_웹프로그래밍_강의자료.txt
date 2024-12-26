@@ -1,0 +1,489 @@
+*웹프로그래밍
+
+곽문기 
+kmoonki@naver.com
+
+*교재 
+IT CookBook, PHP 프로그래밍 입문(3판), 황재호, 한빛아카데미
+---------------------------------------
+*평가
+1. 20(출석,평소) + 40(중간) + 40(기말)
+2. 중간, 기말 => 학교 필기 시험
+
+*과제 제출 카페 - https://cafe.naver.com/seoilhomework
+
+*진행
+1. 실습 위주 ==> 영타 200타/분, 한타 250타/분
+2. 서버 설치, 예제 실행
+3. 용어 정리
+4. 과제 4번쯤 
+5. 구글 크롬 브라우저 + 에디터 (NOT 메모장) + 검색 (구글링)
+----------------------------------------
+
+*인간 vs. 동물 (차이)
+1. Homo Faber (도구의 인간) -> 효율적(과정) vs. 효과적(결과)
+`생산성 - 시간, 비용, 품질
+2. Homo Ludens (유희의 인간) -> 즐겁게 
+
+
+*우리의 도구
+1. Text Editor - 비주얼 스튜디오 코드 (visual studio code) https://code.visualstudio.com/
+`extension - 한글팩, open in browser
+`emmet (default extension) - https://docs.emmet.io/cheat-sheet/
+2. Text Editor - SublimeText 3 https://www.sublimetext.com/3
+3. 이미지 Editor - picpick https://picpick.app/ko
+4. zip - 반디집 https://kr.bandisoft.com/bandizip/
+5. 크롬 웹스토어 (익스텐션) - goFullPage
+6. code share notepad.pw => https://notepad.pw/seoilsw2020
+....
+
+
+*웹(web)
+1. 웹표준 - HTML, CSS, JS - 역할(role)
+`HTML - Structure (뼈대)
+`CSS - Presentation (표현)
+`JS - Behavior (동작, 이벤트)
+
+
+2. 웹 원리 및 구성
+`클라이언트 (요청 request, 브라우저) vs. 서버 (응답 response) - 역할(role)
+`Client(Browser) --(Request)--> Server --(Response)--> Client (Rendering)
+`Front-End vs. Back-End => PHP (웹 프로그래밍 언어)
+
+*연산 언어 vs. 표현 언어
+*프로그래밍 언어 vs. 스크립트 언어 (script) - 컴파일 (compile) 
+`컴파일 잇점 => 수행(실행) 빨라진다, 문법(syntax) 확인
+`번역 vs. 통역
+`Client-side Script (JS) vs. Server-side Script (PHP, ASP, JSP)
+`Request(client) -> Reponse(server) -> Rendering(client)
+
+*정적(static) 페이지 vs. 동적(dynamic) 페이지
+
+----------------------------------------
+#2주차 - 9/10(목)
+
+*참고 사이트
+1. https://www.w3schools.com/
+2. https://htmlreference.io/
+3. https://cssreference.io/
+4. 
+
+*웹표준 정리
+1)Block Element vs. Inline Element - <div> vs. <span>
+`<div> -> <h1>, <p>
+2)Box model - border, padding, margin - width 결정!
+3)*** 선택자(selector) - identify 식별자 - id, class
+`https://www.w3schools.com/cssref/css_selectors.asp
+`가계도 => parent, child, siblings
+4)float 
+5)position - relative(상대) vs. absolute(절대)
+
+*layout => bootstrap (web-page framework) https://getbootstrap.com
+
+*인증절차
+식별자(identity) -> 인증(Authentication) -> 인가(Authorization)
+
+*coding convention
+http://darum.daum.net/
+https://nuli.navercorp.com/
+
+context menu
+
+
+<a href="http://daum.net">다음으로 이동</a>
+
+<a> - 태그, element, 요소
+href - 속성 (attribute)
+http:~~ - 속성 값 (attribute value)
+다음으로 ~ - text node
+
+feature(특징) - 정적 vs. 동적
+attribute vs. property
+
+
+
+나(주체) ---(관계)--- 너(객체)
+객체 + (객체간) 관계 
+
+`이벤트(event) - 이벤트 신호 (trigger) + 이벤트 내용 (handler)
+`event-driven
+
+객체 - 트리거(trigger) - 핸들러(handler)
+// id="box"
+document.getElementById('box').onclick = function(){
+    ~~~
+}
+
+----------------------------------------
+#3주차 - 9/17(목)
+
+`어떻게 보이는지, 어떤 의미인지 - 형식 vs. 내용(의미)
+`Syntax (문법) vs. 시맨틱 (semantic)
+
+<em> vs. <i>
+<strong> vs. <b>
+
+4)float - 영역을 나누는 방법 -> flexbox, grid
+`<ol> vs. <ul>
+`parent-child, sibling
+`scaffolding => border vs. outline
+`css unit => 상대단위 (px,em,% ..), 절대단위 (cm,mm,pt ..)
+`em => {16px == 1em} ==> rem => root em
+<span style="font-size:.8em">안녕</span> => 16*0.8px => 12.8px
+
+<span style="font-size:.8em">
+    <span style="font-size:.8em">안녕</span> => 16*0.8*0.8 => 10.24px
+</span>
+
+<span style="font-size:.8rem">
+    <span style="font-size:.8rem">안녕</span> => 16*0.8 => 12.8px
+</span>
+
+`mouseover(hover) -> mousedown(active) -> mouseup
+
+`식별자 (파일이름, 변수이름...) => 이름만 봐도 무슨일을 하는지 짐작가도록...
+
+`76px
+`159 - 77 = 82px
+`257 - 160 = 97px
+`355 - 258 = 97px
+
+
+*과제 있음.
+https://www.w3schools.com/tags/ref_eventattributes.asp
+
+----------------------------------------
+#4주차 - 9/24(목) 
+
+`cssText
+
+5)position - relative(상대) vs. absolute(절대) - 위치설정
+`원점(절대원점) - 브라우저에서 (0,0) 지점
+`기준점 - 개체(요소)의 위치값
+
+`z-index, perspective
+`redering
+
+z++ vs. ++z
+
+*Bootstrap 설치 및 사용 => getbootstrap.com (web framework)
+*아파치 웹서버 설치 
+
+`responsive web (반응형) vs. adaptive web (적응형)
+`device-width, media-query
+
+href, src => 경로(path) - 절대 vs. 상대
+
+column 수 => 12 (완전수) 6 => 1, 2, 3, 6
+
+https://dummyimage.com/
+
+http://lorempixel.com/
+
+*jQuery javascript를 사용하는 또다른 방법
+보통 자바스크립트 => plain javascript, pure js, vanilla js
+
+
+*과제 bootstrap UI 연습 2개 예제 인증샷
+
+------------------------------------------
+#5주차 - 10/01(목) 추석 휴강 --> 보강주에 실시
+
+----------------------------------------
+#6주차 - 10/08(목) 
+
+*중간고사 알림 (대면시험 - 학교 강의실)
+1)일정 - 10/22(목) - 1C (11:00~11:50), 1B (13:00~13:50) - 자세한 정보는 과사무실에서..
+2)범위 - 문제는 원문 그대로 다만 보기의 순서는 바뀔 수 있습니다.
+#W3Schools.com  Quiz (html,css,javascript)
+`https://www.w3schools.com/html/html_quiz.asp
+`https://www.w3schools.com/css/css_quiz.asp
+`https://www.w3schools.com/js/js_quiz.asp
+#W3Schools.com  Exercises (범위는 지정해 드립니다.)
+`https://www.w3schools.com/html/html_exercises.asp
+`https://www.w3schools.com/css/css_exercises.asp
+`https://www.w3schools.com/js/js_exercises.asp
+
+*오늘 과제는 W3Schools.com  Exercises (범위지정)
+
+
+*flexbox https://www.w3schools.com/css/css3_flexbox.asp
+
+`https://dummyimage.com/
+`http://lorempixel.com/
+
+*javascript => Behavior (role), event-driven
+`event => event-trigger(click, keydown) + event-handler
+`변수, 함수 (내장함수 built-in function, 사용자함수 custom function)
+
+*job (사람의 관점) vs. task (컴퓨터 관점)  ==> work(일)
+버스를 탄다!
+
+function functionName(parameter....){
+    함수의 내용
+}
+
+`변수(variables)의 선언 => var age = 22; // named storage
+*변수의 구분
+1)값의 개수에 따라 - 스칼라 변수 vs. 오브젝트 변수
+`스칼라 - 값이 1개만 존재 -> var age = 22;
+`오브젝트 - 값이 여러개 존재 가능 -> var ages = [23,24,25]; // 배열(array) 
+ages[1] => 24
+var schedule = {
+    flightNo: "OZ353", 
+    depart: "15:00"
+}; // key-value (딕셔너리 dictionary, python)
+schedule['depart'] => '15:00'
+2)값의 범위에 따라 - 전역변수(global) vs. 지역변수(local)
+3)값의 변화에 따라 - 정적변수(static) vs. 동적변수(dynamic)
+var age = 22;
+var age = function(){~~~}
+
+*변수 vs. 함수 - age vs. age()
+
+// 인라인
+
+*모듈화 - 응집도 vs. 결합도 -> 응집도 높게, 결합도 낮게 ==> 품질 향상, 유지보수성 향상
+
+웹프로그래밍을 잘하려면 => 드라마 PD, 영화 감독
+
+*자바스크립트 선택자 (ex. <div id="box"></div>)
+document.getElementById('box') => 단수
+document.getElementsByTagName('div') => 복수 (배열)
+
+document.querySelector('#box') => 단수
+document.querySelectorAll('div') => 복수 (배열)
+
+parent-child vs. sibling
+
+getAttribute() vs. setAttribute()
+getter vs. setter
+
+Math.round() - 반올림 
+Math.ceil() - 올림 1.2 => 2
+Math.floor() - 내림 1.2 => 1
+Math.random() - 0 ~ 1미만의 실수 (0 ~ 0.99999...)
+
+0, 1, 2, 3
+
+Math.random() * 4 0 ~ 4 미만의 실수
+
+
+API (Application Program Interface) -> (프로그램) 사용설명서
+함수의 이름, 파라미터, 결과, 특징....
+
+function vs. method - 주어의 차이
+
+----------------------------------------
+#7주차 - 10/15(목) 
+
+*중간고사 (대면시험 - 학교 강의실)
+1)일정 - 10/22(목) - 1C (11:00~11:50), 1B (13:00~13:50) - 자세한 정보는 과사무실에서..
+2)범위 - 문제는 원문 그대로 다만 보기의 순서는 바뀔 수 있습니다.
+#W3Schools.com  Quiz (html,css,javascript)
+`https://www.w3schools.com/html/html_quiz.asp
+`https://www.w3schools.com/css/css_quiz.asp
+`https://www.w3schools.com/js/js_quiz.asp
+#W3Schools.com  Exercises (범위는 지정해 드립니다.)
+`https://www.w3schools.com/html/html_exercises.asp
+`https://www.w3schools.com/css/css_exercises.asp
+`https://www.w3schools.com/js/js_exercises.asp
+3)특이사항 - 번역없이 원문으로 출제 - 보기는 순서가 바뀌거나, 형식(객관식->주관식)변경 가능
+주관식이라면 단답형 (한두 단어정도로 표현할 수 있는)
+4)문항수 - 40점만점 (25문제 내외)
+5)당일 얼굴 볼 수 있겠네요...^^
+
+
+*알고리즘 핵심 유형
+1)순차(sequential) - 보통 함수 내부에서 사용
+2)선택/분기(selection) - if(비교문){~~}, switch()
+3)반복(iteration) - for(), while()
+
+*jQuery  https://jquery.com/  => javascript를 사용하는 또 다른 방법 (framework, library)
+밀가루 -> 칼국수, 라면, 수제비
+
+*API (Application Program Interface) ==> (프로그램) 사용설명서
+-> 함수/메서드 이름, 파라미터, 결과(return)
+
+getter vs. setter
+getAttribute() vs. setAttribute()
+
+data-* => 변수처리를 위해 만든 html 속성
+
+나는 드라마 PD, 영화감독
+
+----------------------------------------
+#8주차 - 10/22(목) 
+
+중간고사 
+
+----------------------------------------
+#9주차 - 10/29(목) 
+
+연관배열 (Associative Array), 딕셔너리 (dictionary)
+
+`웹서버 설치 + PHP 서버 설치 
+`PHP 시작~
+
+*아파치 웹서버 설치
+1. (윈도우) IIS 설치 여부 확인 (port 충돌) -> 비활성화
+
+2. 아파치 웹서버 다운로드 - https://www.apachelounge.com
+`폴더 구성 -> C:/_server
+`다운로드#1 - 시스템 종류 확인 (32bit/64bit)하여 알맞는것 다운로드 - Apache 2.4.46 Win64
+`다운로드#2 - VC++ runtime 환경 다운로드 - VC_redist.x64.exe
+
+3. 설치 - 웹서버 -> 여기에 풀기  C:/_server/Apache24
+
+4. 웹서버 환경설정 - httpd.conf
+37라인 Define SRVROOT "C:/_server/Apache24"
+227라인 ServerName localhost:80
+
+5. 웹서버 실행 - 도스창(CMD) 관리자권한으로 열기, cd (change directory), >d:
+C:/WINDOWS/system32>cd ../../_server/Apache24/bin
+C:/_server/Apache24/bin>httpd.exe -k install
+`확인) 제어판 > 관리도구 > 서비스
+`서버동작확인) 브라우저에서 http://localhost 
+
+6. 아파치 모니터
+
+
+*PHP 설치하기
+1. PHP 다운로드 https://windows.php.net/  -> VC15 x64 Thread Safe
+php-7.4.12-Win32-vc15-x64
+
+2. Apache Module로서 설치 (반대말 stand-alone)
+httpd.conf에 맨 아래쪽에 다음을 추가 
+############## For PHP 7.4.12 ######################
+PHPIniDir "C:/_server/php-7.4.12-Win32-vc15-x64"
+AddHandler application/x-httpd-php .php
+LoadModule php7_module "C:/_server/php-7.4.12-Win32-vc15-x64/php7apache2_4.dll"
+
+MIME vs. 확장자(extension)
+`누구를 위한 것?
+`Multipurpose Internet Mail Extensions
+
+http://localhost/index.html
+
+클라이언트(브라우저) --(요청,request)--> 서버(PHP or Not) --(응답,response)--> 클라이언트 (실행)
+`클라이언트(브라우저)가 해석(실행) --> HTML, CSS, JS
+`서버가 해석(실행) --> PHP
+
+http://localhost/index.php 
+
+
+*웹서버 vs. WAS (Web Application Server)
+`웹서버 - 정적 파일(static) 서비스 - 전달만
+`WAS - 동적 파일(dynamic) 서비스 - JSP, (PHP, ASP) - Apache Tomcat (JSP 경우) - 연산작업후 전달
+
+https://www.php.net/
+https://www.w3schools.com/php/default.asp
+
+
+*과제> 
+apache web server + PHP 설치하고, 예제 만들기 
+https://getbootstrap.com/docs/4.5/examples/sign-in/
+
+===> http://localhost/sign-in.html
+
+----------------------------------------
+#10주차 - 11/05(목) 
+
+*서버설치가 안될경우 확인사항
+1. 제대로 맞는 다운로드를 했는지? - 64bit/32bit, C++ runtime environment
+2. 경로확인 - 한글/띄어쓰기 사용하지 말기
+3. httpd.conf - 서버홈 제대로 표시했는지..
+
+*아파치 웹서버 서비스 삭제
+1. 관리지권한 CMD open
+2. >sc delete Apache2.4 (엔터)
+2-1. 부팅
+3. 아파치 웹서버 재설치
+
+
+*학과사무실로부터의 알림 내용
+11주차인 11월 10일 화요일 부터 대면수업으로 진행 하셔야 합니다.
+
+수업 진행은 혼용수업으로 진행 될 예정이며 기존에 분반(출석부상)되어있는 학생들이 몇반 있는데 그 분반(출석부상)에 준하지 않고 소프트웨어공학과에서 절반으로 나누어 진행합니다.(출석부상 변동 없습니다)
+
+예) A-1, A-2 반으로 나눌 예정입니다.
+11주차 A-1반 대면 수업으로 학교를 나와 수업을 진행 해야 합니다.
+11주차 A-2반 비대면으로 원격수업 진행할 것 입니다.
+(동일한 날짜와 시간 수업입니다.)
+
+12주차 A-1반 비대면으로 원격수업 진행할 것 입니다. 
+12주차 A-2반 대면 수업으로 학교를 나와 수업을 진행 해야 합니다.
+(동일한 날짜와 시간 수업입니다.)
+
+그렇게 14주차 까지 4번 대면수업을 진행 할 것입니다.
+
+아직 학생들을 나누지 않았고 추후 나뉘는 학생들 명단을 알려드리겠습니다.
+----
+
+**PHP 꼭 알아야 되는 부분
+1. form 변수 전달받기 -> $_GET[], $_POST[] => $_REQUEST[] (비추)
+2. 세션(session)
+3. 데이터베이스 - MySQL 
+
+-=-=-=-=-=-=-=-=-=
+1.form -> login
+
+form : client -> server : 데이터를 전송하기 위한 형식/역할
+1. 누구에게 보낼 것인가? -> form attribute : action 
+2. 어떤 방법으로 보낼 것인가? -> 편지, 엽서 : method="post|get"
+`편지 -
+`엽서 - 길이(양)이 제한적, 내용이 공개 (보안에 취약) 
+`get - 주소창에 변수쌍으로 전송하는 형태
+`post - head에 내용을 넣어서 전송하는 형태
+
+변수, 변수값
+
+http://localhost/b1105/receiver.php?userid=abc%40naver.com&passwd=1234
+
+http://localhost/b1105/receiver.php
+? => 구분자 delimeter  (URL : 전달변수)
+userid=abc%40naver.com
+& => 구분자 delimeter (각 전달변수)
+passwd=1234
+
+URL 주소창에 표현할 수 있는 문자가 제한되어있다. => url encode (percent encode)
+
+https://meyerweb.com/eric/tools/dencoder/
+
+
+client(브라우저) --request--> server(내가? PHP?) ------> 바로 client로 전송(response)
+              (주소창, 링크, JS)                 ------> PHP 엔진 처리 ----> client로 전송(response)
+
+  -----> client(브라우저) 렌더링      
+
+클라이언트 -(request)-> 서버 -(response)-> 클라이언트       
+
+count = count + 1
+count += 1
+
+
+2.qrcode, google chart, kakao map
+1)qrcode
+https://developers.google.com/chart/infographics/docs/qr_codes
+
+https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8
+
+https://chart.googleapis.com/chart
+?
+chs=150x150
+&cht=qr
+&chl=Hello%20world
+&choe=UTF-8
+
+qrcode 생성 (qrgen.html) -> qrcode 이미지 뷰 (qrcode.php)
+
+동적웹페이지(dynamic webpage)
+
+2)google chart
+https://developers.google.com/chart
+
+3.ajax
+
+
+----------------------------------------
+#11주차 - 11/12(목) 

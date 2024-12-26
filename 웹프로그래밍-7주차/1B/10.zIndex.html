@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#red, #blue {
+    width:200px;
+    height:200px;
+    background-color:red;
+
+    position:absolute;
+    top:50px;
+    left:50px;
+}    
+#blue {
+    background-color:blue;
+
+    top:150px;
+    left:150px;
+
+    /* z-index:1; */
+}
+</style>
+</head>
+<body>
+
+<div id="blue"></div>   
+<div id="red"></div> 
+
+<script>
+var z = 0;
+document.querySelector('#blue').onclick = function(){
+    z += 1; // z = z + 1;
+    this.style.zIndex = z; // ++z
+    console.log(z);
+}    
+document.querySelector('#red').onclick = function(){
+    z += 1; // z = z + 1;
+    this.style.zIndex = z; // ++z
+    console.log(z);
+}   
+</script>
+
+</body>
+</html>

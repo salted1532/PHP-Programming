@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+        }
+        #circle {
+            width: 200px;
+            height: 200px;
+            background-color: lightseagreen;
+            border-radius: 50%;
+        }
+        .shadow {
+            box-shadow: 3px 3px 3px #888;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+    <div id="box"></div>
+
+    <script src="bootstrap-4.5.2//js/jquery-3.5.1.min.js"></script>
+    <script>
+        $('box').click(function(){
+            // $(this).css('background-color','lightgreen');
+            // $(this).css('border-radius','50%');
+
+            $(this).css({
+                backgroundColor: 'lightgray', 'border-radius' : '50%'
+            });
+        });
+        $('#circle').click(function(){
+            if($(this).hasClass('shadow')){
+                //remove
+                $(this).removeClass();
+                $(this).removeAttr('shadow');
+            } else {
+                //add
+                // $(this).addClass('shadow');
+                // $(this).addClass('title','shadow장착');
+
+                $(this).addclass('shadow').attr('title','체이닝 실습');
+            }
+        })
+    </script>
+</body>
+</html>

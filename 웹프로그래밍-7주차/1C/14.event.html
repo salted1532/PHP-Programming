@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#box {
+    width:200px;
+    height:200px;
+    background-color:lightcoral;
+}    
+#circle {
+    width:200px;
+    height:200px;
+    background-color:lightblue;
+    border-radius:50%;
+}
+</style>
+</head>
+<body>
+
+<div id="box" onclick="changeColor(this)"></div> <!--인라인 이벤트 inline event-->
+<div id="circle"></div>
+
+<script>
+function changeColor(obj){
+    //document.querySelector('#box').style.backgroundColor = 'purple';
+    obj.style.backgroundColor = 'purple';
+    console.log(obj);
+}
+
+// 대상객체(선택객체) + 트리거 + 핸들러
+document.querySelector('#circle').onclick = function(){
+    //document.querySelector('#circle').style.backgroundColor = 'green';
+    this.style.backgroundColor = 'green';
+    console.log(this);
+}
+</script>
+</body>
+</html>

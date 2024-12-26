@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/bootstrap-4.5.3/css/bootstrap.min.css">
+<title>Document</title>
+<style>
+#map {
+    /* height:500px; */
+    height:100vh; /* viewport height */
+}    
+#map ul.zoom {
+    position: absolute;
+    top:10px;
+    left:10px;
+    z-index:999;
+    list-style-type: none;
+    padding:0;
+}
+#map ul.zoom > li {
+    width:3rem;
+    line-height:3rem;
+    font-size:2.6rem;
+    background-color:#fff;
+    opacity:.7;
+    border:2px solid #999;
+    border-radius:10px;
+    text-align:center;
+    margin:10px 0;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div id="map">
+        <ul class="zoom">
+            <li>+</li>
+            <li>-</li>
+        </ul>
+    </div>
+</div>
+
+<script src="/assets/js/jquery-3.5.1.min.js"></script>
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c362ba71e4d927c043d0a3e4b1e6591e"></script>
+<script>
+var container = document.getElementById('map');
+var options = {
+    center: new kakao.maps.LatLng(37.585616, 127.097090),
+    level: 3
+};
+
+var map = new kakao.maps.Map(container, options);
+
+var mapTypeControl = new kakao.maps.MapTypeControl();
+map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+var zoomControl = new kakao.maps.ZoomControl();
+map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+$('#map ul.zoom > li').click(function(){
+    //console.log($(this).index());
+    if($(this).index() == 0){ // +, zoom-in
+        map.setLevel(map.getLevel() - 1); // 4
+    } else { // zoom-out
+        map.setLevel(map.getLevel() + 1);
+    }
+});
+
+kakao.maps.event.addListener(map, 'click', function(mouseEvent) {  
+    var latlng = mouseEvent.latLng;
+
+    //map.setCenter(latlng);
+    map.panTo(latlng);
+    //console.log(latlng.getLat(), latlng.getLng());
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border-radius: 10px;
+            outline: 1px dotted lightgray;
+        }
+        .circle.purple {
+            background-color: purple;
+        }
+        .red {
+            color: red;
+        }
+        span[title="mytext"] {
+            color : blue !important;
+        }
+    </style>
+</head>
+<body>
+    <div class ="circle">
+        <span class= "red" title ="mytext">circle</span>
+    </div>
+    <div id ="box"></div>
+    <div class ="circle purple"></div>
+</body>
+
+<script>
+    document.getElementById('box').onclick = function() {
+        this.style.backgroundColor = "lightgreen"
+    }
+</script>
+</html>

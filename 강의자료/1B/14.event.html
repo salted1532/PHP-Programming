@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box, #circle {
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+        }
+        #circle {
+            border-radius: 50%;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id ="box" onclick="callMyFunc()"></div>
+    <div id="circle"></div>
+
+    <script>
+        function callMyFunc() {
+            document.querySelector('#box').style.backgroundColor = 'purple';
+        }
+        document.querySelector('#circle').onclick = function() {
+            this.style.backgroundColor = 'lightblue';
+            console.log(this);
+        }
+    </script>
+</body>
+</html>

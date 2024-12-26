@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+.relative {
+    width:60%;
+    height:500px;
+    background-color:lightgray;
+    margin:0 auto;
+
+    position:relative;
+}    
+.absolute {
+    width:100px;
+    height:200px;
+    background-color:lightcoral;
+
+    position:absolute;
+    top:50px;
+    left:-120px;
+}
+.absolute2 {
+    top:100px;
+    left:100px;
+    background-color:olive;
+}
+</style>
+</head>
+<body>
+
+<div class="relative">
+    <div class="absolute"></div>
+</div>
+<div class="absolute absolute2"></div>
+
+</body>
+</html>

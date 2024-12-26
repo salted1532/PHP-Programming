@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/assets/bootstrap-4.5.3/css/bootstrap.min.css">
+<title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <button type="button" class="btn btn-primary btn-block">가져오기</button>
+            <div id="pocket"></div>
+        </div>
+        <div class="col-8"></div>
+    </div>
+</div>
+<script src="/assets/js/jquery-3.5.1.min.js"></script>
+<script>
+$('.btn-primary').click(function(){
+    // $.ajax({}).done(function(){});
+    //$.get('url').done(function(){});
+    $.get('rss.php').done(function(data){ // proxy 호출
+        //console.log(data);
+        var rs = $(data).find('item'); //배열
+        var rsArray = [];
+        $.each(rs, function(){
+            var title = $(this).find('title').text();
+
+            rsArray.push('<li class="list-group-item">'+title+'</li>');
+        });
+
+        $('#pocket').html('<ul class="list-group">'+rsArray.join('')+'</ul>');
+    });
+});    
+</script> 
+</body>
+</html>

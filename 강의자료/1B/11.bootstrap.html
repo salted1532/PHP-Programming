@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-4.5.2/css/bootstrap.min.css">
+    <style>
+        .container, .container-fluid {
+        outline: 1px solid red;
+        }
+        .row > div {
+            outline: 1px dashed green;
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="alert alert-primary" role="alert">
+                    A simple primary alert—check it out!
+                </div>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-success btn-lg btn-block">Success</button>
+                <a class="btn btn-primary" href="#" role="button">Link</a>
+                <input class="btn btn-primary" type="button" value="Input">
+            </div>
+            <div class="col-3">
+                <div class="alert alert-danger" role="alert">
+                    A simple danger alert—check it out!
+                </div>
+            </div>
+          </div>
+    </div>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 .col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://dummyimage.com/600x400/000/fff" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-6 .col-md-4">
+                <div class="card2" style="width: 18rem;">
+                    <img src="http://lorempixel.com/g/400/200/" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-6 .col-md-4">.col-6 .col-md-4</div>
+        </div>
+        <script>
+            document.querySelector('button.btn').onclick = function() {
+                document.querySelector('.card2 > img').setAttribute('src','http://lorempixel.com/400/200/')
+            }
+        </script>
+</body>
+</html>
+<!-- col = 12가 최대수 3 + 6 + 3, 4 + 4 + 4 -->

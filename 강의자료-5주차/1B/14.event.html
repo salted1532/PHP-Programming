@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#box, #circle {
+    width:200px;
+    height:200px;
+    background-color:lightcoral;
+}    
+#circle {
+    border-radius: 50%;
+    background-color: lightgreen;
+}
+</style>
+</head>
+<body>
+
+<div id="box" onclick="callMyFunc(this)"></div> <!--인라인 이벤트 (inline event)-->
+<div id="circle"></div>
+
+<script>
+function callMyFunc(obj){
+    //document.querySelector('#box').style.backgroundColor = 'purple';
+    obj.style.backgroundColor = 'orange';
+}    
+
+// 대상 객체(주어) + 트리거 + 핸들러
+// 콜백함수(callback function)
+document.querySelector('#circle').onclick = function(){
+    //document.querySelector('#circle').style.backgroundColor = 'lightblue';
+    this.style.backgroundColor = 'lightgray';
+    console.log(this);
+}
+</script>
+</body>
+</html>

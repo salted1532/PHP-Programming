@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin:0;
+            background: url('grid.gif') no-repeat;
+        }
+        .relative {
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+        .absolute {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        .absolute2 {
+            top: 150px;
+            left: 150px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="relative"></div>
+    <div class="absolute"></div>
+    <div class="relative"></div>
+    <div class="absolute absolute2"></div>
+    
+</body>
+</html>

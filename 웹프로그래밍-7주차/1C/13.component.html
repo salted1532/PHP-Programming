@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="bootstrap-4.5.2/css/bootstrap.min.css">
+<style>
+.col {
+    /* outline:1px solid lightcoral; */
+}    
+</style>
+<title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <img src="https://dummyimage.com/600x400/333/369" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div><!--/.card-->
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="http://lorempixel.com/600/400/sports/" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div><!--/.card-->
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="http://lorempixel.com/600/400/fashion/" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div><!--/.card-->
+        </div>
+    </div>
+</div>
+
+<script>
+//console.log(document.querySelectorAll('.card').length); // 3
+/*
+document.querySelectorAll('.card')[1].onclick = function(){
+    //alert(1);
+}
+*/
+
+document.querySelector('.col:nth-of-type(2) img').onclick = function(){
+    this.setAttribute('src','http://lorempixel.com/600/400/food/');
+}
+</script>
+</body>
+</html>

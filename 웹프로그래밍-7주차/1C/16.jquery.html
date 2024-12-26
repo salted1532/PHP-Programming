@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+#box {
+    width:200px;
+    height:200px;
+    background-color:lightcoral;
+}    
+</style>
+</head>
+<body>
+
+<div id="box"></div>
+
+<script src="javascript/jquery-3.5.1.min.js"></script>  
+<script>
+/*  콜백함수 (callback function)
+// 대상객체 + 이벤트 트리거(trigger) + 이벤트 핸들러(handler)
+document.querySelector('#box').onclick = function(){
+    ~~
+}
+*/
+// $('#box').click(function(){
+//     $(this).hide(1000, function(){
+//         $(this).show(1000, function(){
+//             alert('사라졌다가 나타남!');
+//         });
+//     });
+// });
+
+// toggle => true | false
+$('#box').click(function(){
+    $(this).toggle(1000, function(){
+        $(this).toggle(1000, function(){
+            alert('사라졌다가 나타남2!');
+        });
+    });
+});
+
+</script>    
+</body>
+</html>
