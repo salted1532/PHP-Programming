@@ -7,7 +7,7 @@
 | 🎓 과목명 | 웹프로그래밍 |
 | 🏫 담당 교수 | 곽문기 교수님 |
 | 🗓️ 수강 학기 | 2020-2학기 |
-| 💡 주요 학습 내용 | HTML |
+| 💡 주요 학습 내용 | HTML, CSS, JavaScript |
 | 🧰 도구 | Visual Studio Code |
 | 🧩 과제 / 프로젝트 | HTML과 PHP를 이용한 데이터베이스 연동 |
 | 🔗 관련 자료 | [노트 보기](./notes/README.md) / [과제 코드](./assignments/) |
